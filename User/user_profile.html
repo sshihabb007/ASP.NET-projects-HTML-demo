@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Profile</title>
+</head>
+<script>
+    function ReqChange() {
+        window.top.location.replace("ChangeInfoReq.html");
+    }
+    function ChangePass() {
+        window.top.location.replace("ChangePass.html");
+    }
+
+</script>
+
+<body>
+
+	<div style="border: 2px solid black; width: 70%;height: 100%; margin-left: 15%; margin-top:5%;  ">
+    <table align="center" style="margin-top: 0%">
+        <tr>
+            <td align="center" colspan="3">
+                <h1>User Profile</h1>
+            </td>
+        </tr>
+        <tr><td align="center" colspan="3"> <img src="https://scontent.fdac28-1.fna.fbcdn.net/v/t1.0-9/10400207_1129307400437398_2288984724153743619_n.jpg?_nc_cat=0&oh=e2d25a3050a7a43d2297c55428bff58f&oe=5BDFEC22" width="30%" height="25%"> </td></tr>
+        <tr><td align="right"><p>Update Photo:</p></td><td> <input type="file" value="" name="cphoto" placeholder="change"> </td> </tr>
+        <tr><td align="right"><p>First Name:</p></td><td> <input type="text" value="Mehedi Hasan" name="fname" readonly> </td> </tr>
+        <tr><td align="right"><p>Last Name:</p></td><td> <input type="text" value="Shihab" name="lname" readonly></td> </tr>
+        <tr><td align="right"><p>Gender:</p></td><td> <input type="text" value="Male" name="gender" readonly></td> </tr>
+        <tr><td align="right"><p>Date of Birth:</p></td><td> <input type="text" value="30-06-2018" name="dob" readonly></td> </tr>
+        <tr><td align="right"><p>Email:</p></td><td>  <input type="text" value="sshihabb007@gmail.com" name="email" readonly></td> </tr>
+        <tr><td align="right"><p>Organization ID:</p></td><td> <input type="text" value="14-27923-3" name="rank" readonly></td></tr>
+        <tr><td align="right"><p>Department Name:</p></td><td> <input type="text" value="CSE" name="dept" readonly> </td> </tr>
+        <tr><td align="right"><p>Rank:</p></td><td> <input type="text" value="10" name="rank" readonly> </td> </tr>
+        <tr><td align="right"><p>Violance Status:</p></td><td> <input type="text" value="None" name="violence" readonly> </td> </tr>
+
+        <tr><td align="right"><p>Phone:</p></td><td>  <input type="text" value="01521213853" name="phone" readonly></td> </tr>
+        <tr><td align="right"><p>Blood Group:</p></td><td> <input type="text" value="O-pos" name="bgroup" readonly></td> </tr>
+        <tr><td align="right"><p>Religion:</p></td><td> <input type="text" value="Islam" name="rel" readonly></td> </tr>
+        <tr><td align="right"><p>Address:</p></td><td> <input type="text" value="Board bazar, Gazipur, Dhaka" name="address" readonly></td> </tr> 
+
+        <tr><td align="center" colspan="3"><input type="button" value="Update Info" onclick="ReqChange()">&nbsp;&nbsp;<input type="button" value="Change Password" onclick="ChangePass()"></td></tr>
+    </table>
+    </div>
+</body>
+</html>
