@@ -119,3 +119,24 @@ img {
     font-size: 18px;
     color: grey
 }
+
+
+#manage_post {
+    width: 12%;
+    height: 40px;
+    background: dodgeblue;
+    border: 0.5px solid skyblue;
+    border-radius: 5px;
+    vertical-align: baseline;
+    margin-left: 10px;
+}
+
+#manage_post_text {
+    text-decoration: bold;
+    color: #616770;
+}
+
+#manage_post_icon {
+    font-size: 18px;
+    color: grey
+}
