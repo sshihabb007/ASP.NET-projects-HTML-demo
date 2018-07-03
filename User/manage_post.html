@@ -1,0 +1,148 @@
+<html>
+<link rel="stylesheet" type="text/css" href="../resource/css/manage_post.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+    <title>Manage Posts</title>
+</head>
+
+<body>
+    <table>
+        <tr align="center">
+            <td>
+                <select id="optionbox">
+                    <option name="options" value="post0" disabled selected>Select an option for details</option>
+                    <option name="options" value="post1">How to make a cup of tea without cooking?</option>
+                    <option name="options" value="post2">How to make a dinner except eating?</option>
+                    <option name="options" value="post3">How to sleep during shower?</option>
+                    <option name="options" value="post4">How to hunt tiger in zoo?</option>
+                    <option name="options" value="post5">How to hit six in short-pitch cricket?</option>
+                </select>
+            </td>
+        </tr>
+        <tr align="center">
+            <td align="center">
+                <table id="post_title_header">
+                    <tr id="post_title_header_border">
+                        <td id="post_title_header_image_position">
+                            <img src="../resource/image/preview.png" id="post_title_header_image">
+                        </td>
+                        <td>
+                            <b>Bob Dylan</b><br>
+                            <b id="rank">Elite</b>
+                        </td>
+                        <td id="solved_status_position">
+                            <b id="unsolved_status">Unsolved</b>
+                            <div id="post_modify_button">
+                                <button id="edit_button" onclick="enable()"><i id="edit_button_icon" class="fa fa-edit"></i><b id="edit_button_text">&nbsp;Edit</b></button>&nbsp;|&nbsp;
+                                <button id="update_button" onclick="disable()"><i id="update_button_icon" class="fa fa-upload"></i><b id="update_button_text">&nbsp;Update</b></button>&nbsp;|&nbsp;
+                                <button id="snooze_button" onclick="snooze()"><i id="snooze_button_icon" class="fa fa-snooze"></i><b id="snooze_button_text">&nbsp;Snooze</b></button>&nbsp;|&nbsp;
+                                <button id="delete_button" onclick="deleted()"><i id="delete_button_icon" class="fa fa-trash-o"></i><b id="delete_button_text">&nbsp;Delete</b></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" id="post_padding">
+                            <input type="text" name="post_title" id="post_title" value="How to code in HTML with Artifical Inteligence" disabled>
+                            <textarea disabled id="post_description" rows="5" cols="40" maxlength="200">This is a description box to express user's desired infoirmation regarding his issue to solved. This is a description box to express user's desired infoirmation regarding his issue to solved. This is a description box to express user's desired infoirmation regarding his issue to solved.</textarea>
+                        </td>
+                    </tr>
+                    <tr id="like_dislike_border">
+                        <td colspan="3">
+                            <div id="like_dislike_size"><button id="like"><i class="fa fa-thumbs-o-up" id="like_dislike_shape"></i>&nbsp;&nbsp;<b align="center" id="count">|&nbsp;&nbsp;0</b></button><button id="dislike"><i class="fa fa-thumbs-o-down" id="like_dislike_shape"></i>&nbsp;&nbsp;<b id="count">|&nbsp;&nbsp;0</b></button></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" id="post_padding">
+                            <div id="answer_section">Answers</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" id="post_padding">
+                            <div id="comments_body">
+                                <table id="table_comments">
+                                    <tr>
+                                        <td rowspan="2">
+                                            <b id="upvote_count">31</b><br><input type="button" value="▲" id="upvote_button"><br><input type="button" value="▼" id="downvote_button"><br><b id="downvote_count">25</b>
+                                        </td>
+                                        <td style="padding: 2px; padding-left: 5px;" width="50px">
+                                            <img src="../resource/image/preview.png" width="30px" height="30px" style="border-radius: 40%;">
+                                        </td>
+                                        <td>
+                                            <b>Bob Dylan</b>&#09;&#09;
+                                            <b id="rank">Elite</b>
+                                        </td>
+                                        <td id="solved_status_position">
+                                            <b id="correct_comment">Correct</b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">
+                                            <div id="comment_content">&#09;This is a description box to express user's desired infoirmation regarding his issue to solved. This is a description box to express user's desired infoirmation regarding his issue to solved. This is a description box to express user's desired infoirmation regarding his issue to solved.</div>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table id="table_comments_next">
+                                    <tr>
+                                        <td rowspan="2">
+                                            <b style="color: lightseagreen;margin-left: 5px;">31</b><br><input type="button" value="▲" style="width: 100%;height: 25px;background: #7CFB7F;border:0px;border-radius:5px;"><br><input type="button" value="▼" style="width: 100%;height: 25px;background: #FF9F9F;border:0px;border-radius:5px;"><br><b style="color: red;margin-left: 5px;">25</b>
+                                        </td>
+                                        <td style="padding: 2px; padding-left: 5px;" width="50px">
+                                            <img src="../resource/image/preview.png" width="30px" height="30px" style="border-radius: 40%;">
+                                        </td>
+                                        <td>
+                                            <b>Bob Dylan</b>&#09;&#09;
+                                            <b style="background: grey; color: white;border-radius: 5px;padding-right: 5px;padding-left: 5px;">Elite</b>
+                                        </td>
+                                        <td id="solved_status_position">
+                                            <b id="incorrect_comment">Incorrect</b>
+                                        </td>
+                                    </tr>
+                                    <tr id="comment_content_border">
+                                        <td colspan="3">
+                                            <div id="comment_content">
+                                                &#09;This is a description box to express user's desired infoirmation regarding his issue to solved. This is a description box to express user's desired infoirmation regarding his issue to solved. This is a description box to express user's desired infoirmation regarding his issue to solved.
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
+<script>
+    function enable() {
+        document.getElementById("post_title").disabled = false;
+        document.getElementById("post_description").disabled = false;
+    }
+</script>
+<script>
+    function disable() {
+        if (confirm("Are you sure ?")) {
+            document.getElementById("post_title").disabled = true;
+            document.getElementById("post_description").disabled = true;
+        }
+
+    }
+    function snooze() {
+        if (confirm("Are you sure ?")) {
+            document.getElementById("post_title").disabled = true;
+            document.getElementById("post_description").disabled = true;
+        }
+
+    }
+    function deleted() {
+        if (confirm("Are you sure ?")) {
+            document.getElementById("post_title").disabled = true;
+            document.getElementById("post_description").disabled = true;
+        }
+
+    }
+</script>
