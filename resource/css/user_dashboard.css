@@ -1,0 +1,121 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+body {
+    background: #E9EBEE;
+}
+
+iframe {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    border-radius: 50%;
+    margin-top: 5%;
+}
+
+#table_body {
+    width: 100%;
+    height: 100vh;
+    display: table;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+
+#bottom_border {
+    border-bottom: 1px solid grey;
+}
+
+#padding_logo {
+    padding-left: 5%;
+}
+
+#top_nav {
+    float: right;
+    padding-right: 5%;
+    margin-top: 1%;
+}
+
+#content_size {
+    width: 100%;
+}
+
+#side_nav_shape {
+    border-right: 1px solid grey;
+    position: absolute;
+    width: 20%;
+    height: 90%;
+}
+
+#table_side_nav {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+#searchbar_shape {
+    width: 100%;
+    border-radius: 4px;
+}
+
+#profile_image_position {
+    border-radius: 50%;
+    margin-top: 5%;
+}
+
+#profile_image_shape {
+    width: 50%;
+    height: 100%;
+}
+
+#posts_shape {
+    padding: 0px;
+    margin: 5px;
+    margin-top: 0px;
+    margin-left: 0px;
+
+    width: 100%;
+    height: 90%;
+}
+
+#posts_body {
+    width: 80%;
+    height: 80%;
+}
+
+#posts_top_nav {
+
+    width: 100%;
+    height: 50px;
+    background: lightgrey;
+}
+
+#create_post {
+    width: 10%;
+    height: 40px;
+    background: dodgeblue;
+    border: 0.5px solid skyblue;
+    border-radius: 5px;
+    vertical-align: baseline;
+    margin-left: 7%;
+}
+
+#create_post_text {
+    text-decoration: bold;
+    color: #616770;
+}
+
+#create_post_icon {
+    font-size: 18px;
+    color: grey
+}
