@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+            table
+            {
+                margin-top: 50px;
+            }
+            th
+            {
+                text-align: right;
+                font-size: 25px;
+                font-weight: bolder;
+            }
+            td
+            {
+                text-align: left;
+                font-size: 20px;
+                padding: 0 0 0 20px;
+            }
+            a
+            {
+                text-decoration: none;
+                font-style: italic;
+            }
+            button
+            {
+                height: 30px;
+                width: 100px;
+            }
+            .block
+            {
+                top: 20%;
+                width: 100%;
+                min-height: 350px;
+                max-width: 380px;
+                margin: auto;
+                left: 0;
+                right: 0;
+                position: absolute;
+                border-radius: 10px;
+                box-shadow: 0 5px 8px 0 rgba(0, 0, 0, .2),0 7px 20px rgba(0, 0, 0, .17);
+
+            }
+            .block-heading
+            {
+                font-size: 25px;
+                font-weight: bolder;
+
+            }
+        </style>
+</head>
+<body>
+        <div class="block" align="center">
+                <div class="block-heading">My Profile</div>
+                    <div id="tablewidget">
+                  
+                    <img class="pull-right" height="100" width="100" src="Profile.jpg" alt="No Image" style="margin-top: 15px;float: right;">
+                    <table cellpadding="5" cellspacing="2" align="center">
+                      <tbody>
+                          <tr>
+                              <td>Student ID:</td>
+                              <td><span class="display-text weighted">15-00001-1</td>
+                          </tr>
+                          <tr>
+                              <td>Full Name:</td>
+                              <td>Walker, Alan</td>
+                          </tr>
+                          <tr>
+                              <td>Department:</td>
+                              <td>CSE</td>
+                          </tr>
+                          <tr>
+                              <td>CGPA:</td>
+                              <td>3.88</td>
+                          </tr>
+                          <tr>
+                              <td>Email:</td>
+                              <td><a href="mailto:something@something.com">something@something.com</a></td>
+                          </tr>
+                          <tr>
+                              <td>Phone:</td>
+                              <td>554447755775</td>
+                          </tr>
+                          <tr>
+                              <td>Status:</td>
+                              <td>Active</td>
+                          </tr>
+                          <tr>
+                                <td>Registered:</td>
+                                <td>6 month ago</td>
+                            </tr>
+                            <tr></tr>
+                          <tr>
+                                <td> </td>
+                                <td><button onclick="Delete(id)">Delete</button></td>
+                            </tr>
+                            <tr></tr><tr></tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+</body>
+<script>
+        function Delete(id)
+        {
+            alert("Deleted");
+        }
+    </script>
+</html>
