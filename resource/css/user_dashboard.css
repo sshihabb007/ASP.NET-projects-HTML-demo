@@ -120,7 +120,6 @@ img {
     color: grey
 }
 
-
 #manage_post {
     width: 12%;
     height: 40px;
@@ -139,4 +138,25 @@ img {
 #manage_post_icon {
     font-size: 18px;
     color: grey
+}
+
+#solved_post {
+    width: 12%;
+    height: 40px;
+    background: dodgeblue;
+    border: 0.5px solid skyblue;
+    border-radius: 5px;
+    vertical-align: baseline;
+    margin-left: 10px;
+}
+
+#solved_post_text {
+    text-decoration: bold;
+    color: #616770;
+}
+
+#solved_post_icon {
+    font-size: 18px;
+    color: limegreen;
+    opacity: .35;
 }
