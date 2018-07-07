@@ -1,0 +1,89 @@
+#table_main
+{
+    width: 60%;
+    margin-top: 5%;
+    padding: 5px;
+    background: dimgray;
+    border-radius: 5px;
+}
+
+#post_title
+{
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    background: lightgray;
+    padding-left: 5px;
+    color: snow;
+    caret-color: aliceblue;
+    text-decoration-color: seashell;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    text-decoration: none;
+    border: 0;
+    margin-bottom: 0;
+}
+
+#post_description
+{
+    width: 100%;
+    height: 200px;
+    background: lightgray;
+    color: black;
+    padding-left: 5px;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 0;
+    margin-top: 0;
+}
+
+#submit_button
+{
+    width: 100px;
+    height: 40px;
+    background: lightgray;
+    color: black;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 0;
+    margin-top: 10px;
+}
+
+#submit_button_text
+{
+    text-decoration: bold;
+    color: #616770;
+}
+
+#submit_button_icon {
+    font-size: 18px;
+    color: grey
+}
+
+#reset_button
+{
+    width: 100px;
+    height: 40px;
+    background: lightgray;
+    color: black;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 0;
+    margin-top: 10px;
+}
+
+#reset_button_text
+{
+    text-decoration: bold;
+    color: #616770;
+}
+
+#reset_button_icon {
+    font-size: 18px;
+    color: grey
+}

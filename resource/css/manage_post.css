@@ -1,4 +1,4 @@
-#solved_search_input {
+#optionbox {
     width: 50%;
     height: 40px;
     border: 0.5px solid skyblue;
@@ -11,7 +11,7 @@
 
 #table_body_main {
     margin-top: 2%;
-    width: 90%;
+    width: 80%;
     border: 0px solid grey;
     margin-bottom: 10px;
     align-content: center;
@@ -23,7 +23,7 @@
     background: #9FA3A1;
     border-radius: 5px;
     margin: 5px;
-    width: 90%;
+    width: 80%;
 }
 
 #post_title_header_border {
@@ -84,11 +84,14 @@
     color: black;
     padding: 5px;
     padding-bottom: 0px;
+    margin-bottom: 0px;
     margin-top: 2px;
+    border:0px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    width: 100%;
 }
 
 #post_description {
@@ -97,10 +100,13 @@
     padding: 5px;
     padding-top: 0px;
     margin-top: 0px;
+    border:0px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
+    width: 100%;
+    position: relative;
 }
 
 #like_dislike_border {
@@ -228,35 +234,95 @@
     margin-left: 10px;
 }
 
-#my_comment_body {
-    width: 100%;
+#post_modify_button {
+    margin-right: 50px;
+    float: right;
 }
 
-#my_comment_table {
-    width: 100%;
-    background: lightgrey;
-    border-radius: 5px;
-}
-
-#my_comment_image_position {
-    padding: 2px;
+#edit_button
+{
+    width: 80px;
+    height: 30px;
+    background: lightgray;
+    color: black;
     padding-left: 5px;
-    width: 50px;
-}
-
-#my_comment_image {
-    width: 30px;
-    height: 30px;
-    border-radius: 40%;
-    padding: 5px;
-}
-
-#my_comment_padding {
-    padding: 5px;
-}
-
-#my_comment_input {
-    width: 100%;
-    height: 30px;
     border-radius: 5px;
+    border: 0.5px solid skyblue;
+}
+
+#edit_button_text
+{
+    text-decoration: bold;
+    color: #616770;
+}
+
+#edit_button_icon {
+    font-size: 18px;
+    color: grey
+}
+
+#update_button
+{
+    width: 80px;
+    height: 30px;
+    background: lightgray;
+    color: black;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 0.5px solid skyblue;
+}
+
+#update_button_text
+{
+    text-decoration: bold;
+    color: #616770;
+}
+
+#update_button_icon {
+    font-size: 18px;
+    color: grey
+}
+
+#snooze_button
+{
+    width: 100px;
+    height: 30px;
+    background: lightgray;
+    color: black;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 0.5px solid skyblue;
+}
+
+#snooze_button_text
+{
+    text-decoration: bold;
+    color: #616770;
+}
+
+#snooze_button_icon {
+    font-size: 18px;
+    color: grey
+}
+
+#delete_button
+{
+    width: 80px;
+    height: 30px;
+    background: lightgray;
+    color: black;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 0.5px solid skyblue;
+}
+
+#delete_button_text
+{
+    text-decoration: bold;
+    color: #616770;
+}
+
+#delete_button_icon {
+    font-size: 18px;
+    color: grey
 }

@@ -10,7 +10,7 @@
         <tr align="center">
             <td>Username</td>
             <td>:</td>
-            <td><input type="text" placeholder="Enter your username"></td>
+            <td><input type="text" id="username" placeholder="Enter your username"></td>
         </tr>
         <tr align="center">
             <td>Password</td>
@@ -29,9 +29,15 @@
 </body>
 <script>
     function login() {
-        window.top.location.replace("User/user_dashboard.html");
+        var username = document.getElementById("username").value;
+        if (username == "admin") {
+            window.top.location.replace("Admin/admin_dashboard.html");
+        }
+        else if (username == "user") {
+            window.top.location.replace("User/user_dashboard.html");
+        }
+        else{}
     }
-
 </script>
 
 </html>

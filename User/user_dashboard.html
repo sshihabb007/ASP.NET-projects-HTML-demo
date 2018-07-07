@@ -1,54 +1,29 @@
 <html>
+<link rel="stylesheet" href="../resource/css/user_dashboard.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <head>
     <title>User Dashboard</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        body {
-            background: #E9EBEE;
-        }
-
-        iframe {
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-            height: 600px;
-        }
-
-        a {
-            text-decoration: none;
-            color: black;
-        }
-        img
-        {
-            border-radius: 50%;
-            margin-top: 5%;
-        }
-    </style>
 </head>
 
 <body>
-    <table style="width: 100%;height: 100%;">
-        <tr style="border-bottom: 1px solid grey;">
-            <td style="padding-left: 5%;">
+    <table id="table_body">
+        <tr id="bottom_border">
+            <td id="padding_logo">
                 <a href="user_dashboard.html"><i>Online<br>Forum</i></a>
             </td>
-            <td style="float: right;padding-right: 5%;margin-top: 1%;">
+            <td id="top_nav">
                 <b>Welcome, <a href="#" onclick="urlChange('user_profile.html')">Bob</a></b>&nbsp;|&nbsp;<a href="#" onclick="logout()"><b>Logout</b></a>
             </td>
         </tr>
-        <tr style="width: 100%">
-            <td width="20%" style="border-right: 1px solid grey;position: absolute">
-                <table style="margin-top: 0px;padding-top: 0px;">
+        <tr id="content_size">
+            <td id="side_nav_shape">
+                <table id="table_side_nav">
                     <tr>
-                        <td style="border-bottom: 1px solid grey;"><input type="text" style="width: 100%;border-radius: 4px " name="searchbar" id="searchbar" placeholder="Search..." onclick="urlChange('StudentsList.html')"></td>
+                        <td id="bottom_border"><input type="text" name="searchbar" id="searchbar_shape" placeholder="Search..." onclick="urlChange('StudentsList.html')"></td>
                     </tr>
                     <tr>
-                        <td align="center" style="border-radius: 50%;margin-top: 5%;"><img src="../resource/image/preview.png" width="50%" height="100%"></td>
+                        <td align="center" id="profile_image_position"><img src="../resource/image/preview.png" id="profile_image_shape"></td>
                     </tr>
                     <tr>
                         <td align="center"><b><a href="#" onclick="urlChange('user_profile.html')">Bob Fisher</a></b></td>
@@ -57,21 +32,28 @@
                         <td><b>Score : 690 pts</b></td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid grey;"><b>Rank : Elite Member</b></td>
+                        <td id="bottom_border"><b>Rank : Elite Member</b></td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid grey;"><a href="#" onclick="urlChange('user_profile.html')">Profile</a></td>
+                        <td id="bottom_border"><a href="#" onclick="urlChange('user_profile.html')">Profile</a></td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid grey;"><a href="#"  onclick="urlChange('forum_feed.html')">Dashboard</a></td>
+                        <td id="bottom_border"><a href="#" onclick="urlChange('forum_feed.html')">Dashboard</a></td>
                     </tr>
                     <tr>
                         <td><a href="#" onclick="urlChange('change_photo.html')">Change photo</a></td>
                     </tr>
                 </table>
             </td>
-            <td width="80%">
-                <table style="margin-top: 0px;padding-top: 0px;">
+            <td id="posts_body">
+                <table id="posts_shape">
+                    <tr id="posts_top_nav">
+                        <td>
+                            <button id="create_post" onclick="urlChange('create_new_post.html')"><i id="create_post_icon" class="fa fa-pencil-square-o"></i>&nbsp;<b id="create_post_text">New Post</b></button>
+                            <button id="manage_post" onclick="urlChange('manage_post.html')"><i id="manage_post_icon" class="fa fa-cog fa-fw"></i>&nbsp;<b id="create_post_text">Manage Post</b></button>
+                            <button id="solved_post" onclick="urlChange('solved_post.html')"><i id="solved_post_icon" class="fa fa-check"></i>&nbsp;<b id="solved_post_text">Solved Post</b></button>
+                        </td>
+                    </tr>
                     <tr>
                         <td><iframe frameborder="0" src="forum_feed.html" id="frame"></iframe></td>
                     </tr>
@@ -81,15 +63,13 @@
     </table>
 </body>
 <script>
-    function urlChange(url) {        
+    function urlChange(url) {
         document.getElementById('frame').src = url;
     }
 
     function logout() {
         window.top.location.replace("../index.html");
     }
-
-
 </script>
 
 </html>
