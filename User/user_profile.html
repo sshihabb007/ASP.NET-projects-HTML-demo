@@ -5,17 +5,17 @@
 </head>
 <script>
     function ReqChange() {
-        window.top.location.replace("ChangeInfoReq.html");
+        document.getElementById('frame').src = "ChangeInfoReq.html";
     }
     function ChangePass() {
-        window.top.location.replace("ChangePass.html");
+        document.getElementById('frame').src = "ChangePass.html";
     }
 
 </script>
 
 <body>
 
-	<div style="border: 2px solid black; width: 70%;height: 100%; margin-left: 15%; margin-top:5%;  ">
+	<div style="border: 2px solid black; width: 80%;height: 100%; margin-left: 10%; margin-top:2%; margin-bottom: 2%;  ">
     <table align="center" style="margin-top: 0%">
         <tr>
             <td align="center" colspan="3">
@@ -39,7 +39,7 @@
         <tr><td align="right"><p>Religion:</p></td><td> <input type="text" value="Islam" name="rel" readonly></td> </tr>
         <tr><td align="right"><p>Address:</p></td><td> <input type="text" value="Board bazar, Gazipur, Dhaka" name="address" readonly></td> </tr> 
 
-        <tr><td align="center" colspan="3"><input type="button" value="Update Info" onclick="ReqChange()">&nbsp;&nbsp;<input type="button" value="Change Password" onclick="ChangePass()"></td></tr>
+        <tr><td align="center" colspan="3"><a href="ChangeInfoReq.html"><input type="button" value="Update Info"></a>&nbsp;&nbsp;<a href="ChangePass.html"><input type="button" value="Change Password"></a></td></tr>
     </table>
     </div>
 </body>
