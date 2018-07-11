@@ -107,14 +107,15 @@
 <script>
         function Delete(id)
         {
-           if(confirm("Are You Sure?"))
-           {
-               document.location="";
-           }
+            alert("Deleted");
         }
         function StudentEdit(id)
         {
-           document.location="student_profile_Edit.html";
+           var s= confirm("Are You Sure?");
+           if(s==true)
+           {
+               document.location="student_profile_Edit.html";
+           }
         }
     </script>
 </html>
