@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Complain</title>
+</head>
+<script>
+
+    function Complain() {
+        if (confirm("Are you sure ?")) {
+            document.getElementById("id").value="";
+            document.getElementById("sub").value="";
+            document.getElementById("desc").value="";
+            return true;
+        }else
+      return false;
+
+    }
+
+</script>
+<center>
+<body>
+<div style="width: 35%;border: 2px solid rgba(0,0,0,0.4); margin-top: 50px; ">
+	<form  method="post" name="frame">
+		<table>
+			<tr><td align="right"><p>Student ID:</p></td><td><input type="text" id="id" ></td></tr>
+			<tr><td align="right"><p>Subject:</p></td><td><input type="text" id="sub" ></td></tr>
+			<tr rowspan="3" ><td align="right" ><p>Description:</p></td><td><textarea id="desc" rows="3" cols="30"></textarea></td></tr>
+			<tr><td align="right"><p></p></td><td><input type="submit" value="Submit" onclick="return Complain()"></td></tr>
+		</table>
+	</form>
+</div>
+</body> 
+</center>
+</html>
