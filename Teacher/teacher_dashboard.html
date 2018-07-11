@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <title>Teacher Dashboard</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        body {
+            background: #F1F1F1;
+        }
+
+        iframe {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            height: 600px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #searchbar_shape {
+            width: 100%;
+            border-radius: 4px;
+        }
+
+        #bottom_border {
+            border-bottom: 1px solid grey;
+        }
+
+    </style>
+</head>
+
+<body>
+    <table style="width: 100%;height: 100%;">
+        <tr style="border-bottom: 1px solid grey;">
+            <td style="padding-left: 5%;">
+                <a href="teacher_dashboard.html"><i>Online<br>Forum</i></a>
+            </td>
+            <td style="float: right;padding-right: 5%;margin-top: 1%;">
+                <b><a href="teacher_dashboard.html">Dashboard</a></b>&nbsp;|&nbsp;<a href="#" onclick="logout()"><b>Logout</b></a>
+            </td>
+        </tr>
+        <tr style="width: 100%">
+            <td width="20%" style="border-right: 1px solid grey;position: absolute">
+                <table style="margin-top: 0px;padding-top: 0px;">
+                    <tr>
+                        <td><input type="text" name="searchbar" id="searchbar_shape" placeholder="Search..." onclick="urlChange('teacher_home_feed.html')"></td>
+                    </tr>
+                    <tr>
+                        <td id="bottom_border"><a href="#" onclick="urlChange('students_list.html')">&#9679;&emsp;<b>Students</b></a></td>
+                    </tr>
+                    <tr>
+                        <td id="bottom_border"><a href="#" onclick="urlChange('info_change_list.html')">&emsp;&emsp;<b>Information Change Request</b></a></td>
+                    </tr>
+                    <tr>
+                        <td id="bottom_border"><a href="#" onclick="urlChange('teacher_home_feed.html')">&#9679;&emsp;<b>Dashboard</b></a></td>
+                    </tr>
+                    <tr>
+                        <td id="bottom_border"><a href="#" onclick="urlChange('Post_List.html')">&emsp;&emsp;<b>Forum's Feed</b></a></td>
+                    </tr>
+                    <tr>
+                        <td id="bottom_border"><a href="#" onclick="urlChange('Manage_Post.html')">&emsp;&emsp;<b>Manage Posts</b></a></td>
+                    </tr>
+                    <tr>
+                        <td id="bottom_border"><a href="#" onclick="urlChange('complain.html')">&emsp;&emsp;<b>Complains</b></a></td>
+                    </tr>
+                    <tr>
+                        <td id="bottom_border"><a href="#" onclick="urlChange('Statistics.html')">&#9679;&emsp;<b>Reports</b></a></td>
+                    </tr>
+                    <tr>
+                        <td id="bottom_border"><a href="#" onclick="urlChange('leaderboard.html')">&emsp;&emsp;<b>Leaderboard</b></a></td>
+                    </tr>
+                    <tr>
+                        <td id="bottom_border"><a href="#" onclick="urlChange('Statistics.html')">&emsp;&emsp;<b>Statistics</b></a></td>
+                    </tr>
+                    <tr>
+                        <td id="bottom_border"><a href="#" onclick="logout()">&#9679;&emsp;<b>Logout</b></a></td>
+                    </tr>
+                </table>
+            </td>
+            <td width="80%">
+                <table style="margin-top: 0px;padding-top: 0px;">
+                    <tr>
+                        <td><iframe frameborder="0" src="teacher_home_feed.html" id="frame"></iframe></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    function urlChange(url) {
+        document.getElementById('frame').src = url;
+    }
+
+    function logout() {
+        window.top.location.replace("../index.html");
+    }
+
+</script>
+
+</html>

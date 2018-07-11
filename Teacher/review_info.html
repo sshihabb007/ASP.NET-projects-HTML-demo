@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Update Info</title>
+    <style>
+        fieldset {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Pending Requests</legend>
+        <table align="center" width="100%" border="1" cellspacing="0" border="1" cellpadding="5">
+            <tr>
+                <th>Attribute Name</th>
+                <th>Previous Value</th>
+                <th>Requested Value</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>Shakib Khan</td>
+                <td>Shakil Khan</td>
+                <td><b onclick="permission()">Approve</b>&emsp;|&emsp;<b onclick="permission()">Reject</b></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>Nikunja-2, Dhaka</td>
+                <td>Bashundhara R/A, Dhaka</td>
+                <td><b onclick="permission()">Approve</b>&emsp;|&emsp;<b onclick="permission()">Reject</b></td>
+            </tr>
+        </table>
+    </fieldset>
+</body>
+
+</html>
+
+<script>
+    function permission() {
+        if (confirm("Are you sure?")) {
+            window.top.location.replace("admin_dashboard.html");
+
+        }
+    }
+
+</script>
