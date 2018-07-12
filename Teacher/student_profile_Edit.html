@@ -1,0 +1,206 @@
+<html>
+    <head>
+        <style>
+            .block
+            {
+                top: 10%;
+                width: 100%;
+                min-height: 350px;
+                max-width: 450px;
+                margin: auto;
+                left: 0;
+                right: 0;
+                position: absolute;
+                border-radius: 10px;
+                box-shadow: 0 5px 8px 0 rgba(0, 0, 0, .2),0 7px 20px rgba(0, 0, 0, .17);
+
+            }
+            .img
+        {
+            font-size: 18px;
+            width: 90%;
+            border-radius: 5px;
+            border:none;
+            height: 30px;
+        }
+        .img:hover
+        {
+            cursor: pointer;
+            border: 1px solid blue;
+            
+        }
+        form
+        {
+            text-align: center;
+            font:bold;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        table
+        {
+            width: 100%;
+            padding: 5%;
+        }
+        .readonlybox
+        {
+            width: 90%;
+            height: 30px;
+            font-size: 20px;
+            border-radius: 5px;
+            border:none;
+        }
+        .box
+        {
+            width: 90%;
+            height: 30px;
+            font-size: 20px;
+            border-radius: 5px;
+            border:none;
+        }
+        .box:hover
+        {
+            cursor: pointer;
+            border: 1px solid blue;
+        }
+        th
+        {
+            width: 40%;
+            text-align: right;
+            font-weight: bolder;
+            padding: 0, 10px, 0 ,0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+        button
+            {
+                height: 30px;
+                width: 100px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="block" >
+            <div>
+                <h1 style="font: bolder;text-align: center;">Student Profile</h3>
+            </div>
+                <form action="#" method="POST" align='center'>
+                        <table>
+                            <img id="im" height="100" width="100" src="Profile.jpg" alt="No Image" style="margin-top: 15px;">
+                            <tr>
+                                    <th>Image:</th>
+                                    <td><input type="file" name="img" class="img" id="data" onchange="image(); showimg(this)" accept="image/gif, image/jpeg, image/jpg, image/png"></td>
+                                </tr>
+                            <tr>
+                                <th>Student ID:</th>
+                                <td><input type="text" name="ID" class="readonlybox" value="15-00001-1" readonly ></td>
+                            </tr>
+                            <tr>
+                            <th>
+                                    Full Name:
+                            </th>
+                            <td><input type="text" name="Full_Name"class="box" value="Walker, Alan" ></td>
+                        </tr>
+                        <tr>
+                            <th>Department:</th>
+                            <td><select name="Department" class="box" >
+                                <option value="">Select One</option>
+                                <option value="CSE" selected>CSE</option>
+                                <option value="EEE">EEE</option>
+                                <option value="BBA">BBA</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <th>CGPA:</th>
+                            <td>
+                                <input type="text" name="CGPA" class="box" value="3.88">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Email:</th>
+                            <td><input type="text" name="Email" class="box" value="something@something.com"></td>
+                        </tr>
+                        <tr>
+                            <th>
+                                    Phone:
+                            </th>
+                            <td>
+                                <input type="text" name="Phone:" class="box" value="554447755775">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Status:</th>
+                            <td>
+                                <select name="Status" class="box" >
+                                    <option value="">Select One</option>
+                                    <option value="Active" selected >Active</option>
+                                    <option value="Deactive">Deactive</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td><button onclick="Submit(id)" >Submit</button></td>
+                        </tr>
+                        </table>
+                    </form>
+        </div>
+    </body>
+</html>
+<script>
+    function Submit(id)
+    {
+       var c= confirm("Are You Sure?");
+       if(c==true)
+       {
+           alert("Changed Successfully");
+       }
+    }
+    function image()
+{
+	var filedata =document.getElementById('data')
+	var filepath=filedata.value;
+	var type =null;
+	var image=document.getElementById('im');
+    var img =false;
+	if(filepath=='')
+		{
+			image.src=null;
+			alert("Please upload an image");
+			img= false;
+		}
+	else
+		{
+			type=filepath.substring(filepath.lastIndexOf('.')+1).toLowerCase();
+		}
+	if (type=="jpg" || type=="jpeg" || type=="gif" || type=="png") {
+		img= true;
+	}
+	else
+		{
+			alert("Photo only allows file types of GIF, PNG, JPG, and JPEG.");
+			img= false;
+		}
+        return img;
+
+}
+function showimg(e)
+{
+	if(image()==true)
+		{
+			if(e.files && e.files[0])
+				{
+					var obj =new FileReader();
+					obj.onload = function(data){
+						var image=document.getElementById('im');
+						image.src=data.target.result;
+					}
+					obj.readAsDataURL(e.files[0]);
+				}
+		}
+        else
+        {
+            var filedata =document.getElementById('data');
+            filedata.value=null;
+        }
+}
+</script>

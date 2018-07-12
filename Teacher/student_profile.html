@@ -58,7 +58,7 @@
                 <div class="block-heading">My Profile</div>
                     <div id="tablewidget">
                   
-                    <img class="pull-right" height="100" width="100" src="Profile.jpg" alt="No Image" style="margin-top: 15px;float: right;">
+                    <img height="100" width="100" src="Profile.jpg" alt="No Image" style="margin-top: 15px;">
                     <table cellpadding="5" cellspacing="2" align="center">
                       <tbody>
                           <tr>
@@ -95,7 +95,7 @@
                             </tr>
                             <tr></tr>
                           <tr>
-                                <td> </td>
+                                <td><button onclick="StudentEdit(id)" >Edit</button></td>
                                 <td><button onclick="Delete(id)">Delete</button></td>
                             </tr>
                             <tr></tr><tr></tr>
@@ -108,6 +108,14 @@
         function Delete(id)
         {
             alert("Deleted");
+        }
+        function StudentEdit(id)
+        {
+           var s= confirm("Are You Sure?");
+           if(s==true)
+           {
+               document.location="student_profile_Edit.html";
+           }
         }
     </script>
 </html>
